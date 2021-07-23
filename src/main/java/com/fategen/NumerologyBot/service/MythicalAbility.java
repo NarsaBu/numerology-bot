@@ -8,7 +8,6 @@ import lombok.AllArgsConstructor;
 public class MythicalAbility {
 
     private final String date;
-
     
     public int calculate() {
         DateValidator.validate(date);

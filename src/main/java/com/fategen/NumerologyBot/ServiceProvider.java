@@ -1,10 +1,12 @@
 package com.fategen.NumerologyBot;
 
+import com.fategen.NumerologyBot.service.CvAssistAndInterviewDate;
 import com.fategen.NumerologyBot.service.DayForecast;
 import com.fategen.NumerologyBot.service.Health;
 import com.fategen.NumerologyBot.service.KarmaDebt;
 import com.fategen.NumerologyBot.service.MonthForecast;
 import com.fategen.NumerologyBot.service.MythicalAbility;
+import com.fategen.NumerologyBot.service.ProfessionAssist;
 import com.fategen.NumerologyBot.service.Talents;
 import com.fategen.NumerologyBot.service.YearForecast;
 import com.fategen.NumerologyBot.service.birthMeaning.BirthMeaning;
@@ -109,5 +111,15 @@ public class ServiceProvider {
     public String getMythicalAbility(String date) {
         MythicalAbility mythicalAbility = new MythicalAbility(date);
         return String.valueOf(mythicalAbility.calculate());
+    }
+
+    public String getProfessionAssist(String date) {
+        ProfessionAssist professionAssist = new ProfessionAssist(date);
+        return professionAssist.calculate();
+    }
+
+    public String getCvAssistAndInterviewDate(String date, String interviewDate) {
+        CvAssistAndInterviewDate cvAssistAndInterviewDate = new CvAssistAndInterviewDate(date, interviewDate);
+        return cvAssistAndInterviewDate.calculate();
     }
 }
