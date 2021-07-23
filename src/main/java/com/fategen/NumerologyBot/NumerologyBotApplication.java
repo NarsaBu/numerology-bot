@@ -74,6 +74,9 @@ public class NumerologyBotApplication {
 //
 //		System.out.println(serviceProvider.getCvAssistAndInterviewDate(dianaDate, "15.02.2021"));
 //		System.out.println();
+//
+//		System.out.println(serviceProvider.getPartnerAssist(dianaDate));
+//		System.out.println();
 	}
 
 }

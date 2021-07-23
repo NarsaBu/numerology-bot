@@ -55,12 +55,12 @@ public class Compatibility {
             result.add(service.calculate(userMatrix, partnerMatrix));
         }
 
-//        for (int[] matrix : userMatrix) {
-//            for (int i : matrix) {
-//                System.out.printf("%5d", i);
-//            }
-//            System.out.println();
-//        }
+        for (int[] matrix : userMatrix) {
+            for (int i : matrix) {
+                System.out.printf("%5d", i);
+            }
+            System.out.println();
+        }
         return result;
     }
 }

@@ -14,13 +14,6 @@ public class ProfessionAssist {
 
         int num = NumberUtils.removePointsFromDate(date);
 
-        while (num / 10 != 0) {
-            num = NumberUtils.sumOfDigits(num);
-            if (num == 11 || num == 22) {
-                break;
-            }
-        }
-
-        return String.valueOf(num);
+        return String.valueOf(NumberUtils.sumOfDigitsCyclerWithoutElevenAndTwelve(num));
     }
 }

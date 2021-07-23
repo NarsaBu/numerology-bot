@@ -6,6 +6,7 @@ import com.fategen.NumerologyBot.service.Health;
 import com.fategen.NumerologyBot.service.KarmaDebt;
 import com.fategen.NumerologyBot.service.MonthForecast;
 import com.fategen.NumerologyBot.service.MythicalAbility;
+import com.fategen.NumerologyBot.service.PartnerAssist;
 import com.fategen.NumerologyBot.service.ProfessionAssist;
 import com.fategen.NumerologyBot.service.Talents;
 import com.fategen.NumerologyBot.service.YearForecast;
@@ -91,6 +92,11 @@ public class ServiceProvider {
     public String getDayForecast(String date, String interestingDate) {
         DayForecast dayForecast = new DayForecast(date, interestingDate);
         return String.valueOf(dayForecast.calculate());
+    }
+
+    public String getPartnerAssist(String date) {
+        PartnerAssist partnerAssist = new PartnerAssist(date);
+        return partnerAssist.calculate();
     }
 
     public String getTalents(String fullName) {

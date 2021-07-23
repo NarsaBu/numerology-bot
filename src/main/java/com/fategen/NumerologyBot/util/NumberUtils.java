@@ -42,6 +42,22 @@ public class NumberUtils {
         return num;
     }
 
+    /** Повторяет функционал метода sumOfDigitsCycler.
+     * Если после итерации получилось число 11 или 22, то возвращает эти числа
+     *
+     * @param num - число
+     * @return - возвращает однозначное число
+     */
+    public static int sumOfDigitsCyclerWithoutElevenAndTwelve(int num) {
+        while (num / 10 != 0) {
+            num = sumOfDigits(num);
+            if (num == 11 || num == 22) {
+                break;
+            }
+        }
+        return num;
+    }
+
     /** Получить дату в формате LocalDate
      *
      * @param date - дата в строковом формате
